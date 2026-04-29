@@ -20,7 +20,7 @@ class Complejo
     {
         return Cabañas[id];
     }
-    public List<Cabaña> ObtenerTodasLasCabañas()
+    public Dictionary<int, Cabaña> ObtenerTodasLasCabañas()
     {
         return Cabañas;
     }

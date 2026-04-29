@@ -9,11 +9,12 @@ public class CabañasController : Controller
         Complejo complejo = new Complejo();
         complejo.cargarCabañas();
         ViewBag.Cabañas = complejo.ObtenerTodasLasCabañas();
+        ViewBag.Complejo = complejo;
         return View();
     }
     public IActionResult Cabaña(int id)
     {
-        Cabaña cabaña = Complejo.Instancia.ObtenerCabaña(id);
+        Cabaña cabaña = ViewBag.Complejo.ObtenerCabaña(id);
         ViewBag.Cabaña = cabaña;
         return View();
     }
